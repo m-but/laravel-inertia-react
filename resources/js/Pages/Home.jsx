@@ -1,9 +1,9 @@
 import React from 'react'
 
-function Home() {
+function Home({name}) {
   return (
     <>
-        <h1 className='title'>Hello React</h1>
+        <h1 className='title'>Hello {name}</h1>
     </>
   )
 }
