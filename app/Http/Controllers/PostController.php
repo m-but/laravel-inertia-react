@@ -31,4 +31,11 @@ class PostController extends Controller
 
         return redirect("/");
     }
+
+    public function show(Post $post)
+    {
+        return inertia("Show", [
+            "post" => $post
+        ]);
+    }
 }
