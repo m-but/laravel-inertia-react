@@ -9,7 +9,7 @@ class PostController extends Controller
 {
     public function index()
     {
-        $posts = Post::latest()->get();
+        $posts = Post::latest()->paginate(8);
 
         return inertia("Home", [
             'posts' => $posts
