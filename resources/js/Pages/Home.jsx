@@ -1,4 +1,4 @@
-import { Link, usePage } from "@inertiajs/react";
+import { Head, Link, usePage } from "@inertiajs/react";
 import React, { useState } from "react";
 
 function Home({ posts }) {
@@ -12,6 +12,7 @@ function Home({ posts }) {
 
   return (
     <>
+      <Head title="Home" />
       <h1 className="title">All posts</h1>
       {flashMsg && (
         <div
