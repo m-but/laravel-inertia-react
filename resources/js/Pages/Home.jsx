@@ -5,9 +5,11 @@ function Home({ posts }) {
   const { flash } = usePage().props;
 
   const [flashMsg, setFlashMsg] = useState(flash.message);
+  const [flashScc, setFlashScc] = useState(flash.success);
 
   setTimeout(() => {
     setFlashMsg(null);
+    setFlashScc(null);
   }, 2000);
 
   return (
@@ -19,6 +21,13 @@ function Home({ posts }) {
           className={`absolute top-24 right-6 bg-rose-500 rounded-md shadow-lg text-sm text-white p-2`}
         >
           {flashMsg}
+        </div>
+      )}
+      {flashScc && (
+        <div
+          className={`absolute top-24 right-6 bg-green-500 rounded-md shadow-lg text-sm text-white p-2`}
+        >
+          {flashScc}
         </div>
       )}
       <div>

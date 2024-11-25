@@ -39,6 +39,24 @@ class PostController extends Controller
         ]);
     }
 
+    public function edit(Post $post)
+    {
+        return inertia("Edit", [
+            "post" => $post
+        ]);
+    }
+
+    public function update(Request $request, Post $post)
+    {
+        $validated_data = $request->validate([
+            "body" => "required"
+        ]);
+
+        $post->update($validated_data);
+
+        return redirect("/")->with("success", "The post was updated.");
+    }
+
     public function destroy(Post $post)
     {
         $post->delete();

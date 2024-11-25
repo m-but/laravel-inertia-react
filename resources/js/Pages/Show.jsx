@@ -1,4 +1,4 @@
-import { useForm } from "@inertiajs/react";
+import { Link, useForm } from "@inertiajs/react";
 import { useState } from "react";
 
 function Show({ post }) {
@@ -38,6 +38,12 @@ function Show({ post }) {
           >
             Delete
           </button>
+          <Link
+            href={`/posts/${post.id}/edit`}
+            className="px-4 py-1 text-sm text-white bg-green-500 rounded-md"
+          >
+            Edit
+          </Link>
         </div>
       </div>
 
