@@ -10,5 +10,5 @@ class Post extends Model
 {
     use HasFactory, Notifiable;
 
-    protected $fillabel = ["body"];
+    protected $fillable = ["body"];
 }

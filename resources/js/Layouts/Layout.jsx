@@ -7,7 +7,7 @@ function Layout({children}) {
         <header>
             <nav>
                 <Link href="/" className="nav-link">Home</Link>
-                <Link href="/about" className="nav-link">About</Link>
+                <Link href="/posts/create" className="nav-link">Create</Link>
             </nav>
         </header>
 

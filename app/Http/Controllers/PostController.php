@@ -15,4 +15,20 @@ class PostController extends Controller
             'posts' => $posts
         ]);
     }
+
+    public function create()
+    {
+        return inertia("Create");
+    }
+
+    public function store(Request $request)
+    {
+        $validated_data = $request->validate([
+            "body" => "required"
+        ]);
+
+        Post::create($validated_data);
+
+        return redirect("/");
+    }
 }
